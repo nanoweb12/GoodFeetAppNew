@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.javatpoint.goodfeet.NewCustomer" >
+
+    <Button
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:text="FirstName" />
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton1"
+        android:layout_alignBottom="@+id/toggleButton1"
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/toggleButton1"
+        android:hint="Enter fname" />
+
+    <Button
+        android:id="@+id/toggleButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:text="LastName" />
+
+    <EditText
+        android:id="@+id/edt_lname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton3"
+        android:layout_alignBottom="@+id/edt_name"
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/toggleButton3"
+        android:hint="Enter lname" />
+    
+    <Button
+        android:id="@+id/btn_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="140dp"
+        android:text="Email" />
+    
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_email"
+        android:layout_alignBottom="@+id/toggleButton3"
+        android:layout_marginLeft="80dp"
+        android:layout_toRightOf="@+id/btn_email"
+        android:hint="Email" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="200dp"
+        android:text="Submit" />
+
+</RelativeLayout>

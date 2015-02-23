@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/one"
+        android:title="Customer Information"/>
+	
+	<item
+        android:id="@+id/two"
+        android:title="Product Guide"/>
+      
+    <item
+        android:id="@+id/three"
+        android:title="Step by Step"/>
+       
+        
+</menu>

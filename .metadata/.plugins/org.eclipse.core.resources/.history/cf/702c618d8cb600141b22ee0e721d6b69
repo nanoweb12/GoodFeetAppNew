@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0098cc"
+    android:orientation="vertical"
+    android:weightSum="100" >
+<!-- <LinearLayout
+        android:id="@+id/appicon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+         android:layout_weight="15"
+        android:background="#f3fafe"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo3" />
+    </LinearLayout> -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:text="Do you have any concerns about your feet?"
+         android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="65"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+  <ImageView
+        android:id="@+id/previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+           
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="45"
+            android:background="#ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/body_1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="45"
+            android:background="#ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/body_2" />
+          <ImageView
+               android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+            
+            android:scaleType="fitCenter"
+            android:src="@drawable/right_arrow" />
+          
+          
+          
+         <com.androidhub4you.crop.RoundedImageView
+        android:id="@+id/imageView_round"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/rounded" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="9"
+        android:text="Any additional comments?"
+         android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="14"
+        android:background="#ffffff" />
+    
+
+  <!--   <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="35dp"
+     	android:background="#565656"
+        android:gravity="center_vertical"
+        android:layout_marginTop="7dp"
+       
+        android:layout_weight="12"
+        android:layout_marginBottom="7dp"
+        android:text="Save"
+       
+        android:paddingLeft="9dp"
+        android:textSize="20sp" /> -->
+
+</LinearLayout>

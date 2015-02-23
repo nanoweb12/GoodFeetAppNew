@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+       android:background="#0098cc"
+    android:orientation="vertical" >
+    
+  
+        <LinearLayout
+            android:id="@+id/appicon"
+            android:layout_width="match_parent"
+          android:layout_height="67dp"
+            android:background="#f3fafe"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+               android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo3" />
+        </LinearLayout>
+    
+     
+    
+     <TextView
+         android:id="@+id/txt_view1"
+         android:layout_below="@+id/appicon"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Help us find right combination of supports for you!"
+         android:layout_marginTop="10dp"
+         android:textColor="#ffffff"
+         android:layout_centerHorizontal="true"
+     
+         />
+     
+     
+     <TextView
+         android:id="@+id/txt_view2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="What do you do to play?"
+     android:layout_centerHorizontal="true"
+         android:textColor="#ffffff"
+         android:layout_below="@+id/txt_view1"
+      
+     
+         />
+     
+     <TextView
+         android:id="@+id/txt_view3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Shoes"
+     	android:layout_below="@+id/txt_view2"
+         android:textColor="#ffffff"
+         android:layout_marginLeft="80dp"  
+         android:layout_marginTop="10dp"  
+         />
+     
+     
+       <TextView
+         android:id="@+id/txt_view4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Activities"
+     	android:layout_below="@+id/txt_view2"
+     	android:layout_toRightOf="@+id/txt_view3"
+         android:textColor="#ffffff"
+             android:layout_marginTop="10dp"
+         android:layout_marginLeft="200dp"    
+         />
+     
+  <GridView
+      android:id="@+id/grid_view1"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:numColumns="2"
+      android:background="#ffffff"
+      android:layout_below="@+id/txt_view3"
+      android:layout_marginLeft="5dp"
+      
+      >
+
+        
+     
+</GridView>
+
+   <GridView
+      android:id="@+id/grid_view2"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:numColumns="3"
+      android:background="#ffffff"
+      android:layout_below="@+id/txt_view4"
+      android:layout_toRightOf="@+id/grid_view1"
+      android:layout_marginLeft="150dp"
+      
+      >
+     
+</GridView>
+   
+
+    
+
+</RelativeLayout>

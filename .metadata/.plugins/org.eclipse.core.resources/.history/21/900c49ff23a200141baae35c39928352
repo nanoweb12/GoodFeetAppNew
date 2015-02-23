@@ -1,0 +1,236 @@
+package com.example.registration;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+
+	TextView txt_fname,txt_lname,txt_email,txt_edt_uname,txt_user_password;
+
+	EditText edt_fname,edt_lname,edt_email,edt__uname,edt_password;
+	Button btn_register,btnsubmit;
+
+	favuritdatabaseAdapter databaseadapter;
+	//new entry
+	SQLiteDatabase db=null;
+	Intent i=null;
+
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		txt_fname=(TextView)findViewById(R.id.txt_user_name);
+		txt_lname=(TextView)findViewById(R.id.txt_last_name);
+		txt_email=(TextView)findViewById(R.id.txt_email);
+		txt_edt_uname=(TextView)findViewById(R.id.txt_user_name);
+		txt_user_password=(TextView)findViewById(R.id.txt_password);
+		
+		
+		edt_fname=(EditText)findViewById(R.id.edt_first_name);
+		edt_lname=(EditText)findViewById(R.id.edt_last_name);
+		edt_email=(EditText)findViewById(R.id.edt_email);
+		edt__uname=(EditText)findViewById(R.id.edt_user_name);
+		edt_password=(EditText)findViewById(R.id.edt_user_password);
+		//new entry
+		db=openOrCreateDatabase("mydb", MODE_PRIVATE, null);
+		
+
+		SharedPrefManager1.Init(this);
+		
+		
+			
+		
+		btn_register=(Button)findViewById(R.id.btn_register);
+		btn_register.setOnClickListener(new OnClickListener() {
+	
+					public void onClick(View v) {
+			
+			
+				databaseadapter=new favuritdatabaseAdapter(MainActivity.this);
+				
+				databaseadapter.insert(edt_fname.getText().toString(),edt_lname.getText().toString(),edt_email.getText().toString(),edt__uname.getText().toString(),edt_password.getText().toString());
+			
+				if(edt_fname.getText().toString().trim().length()==0||edt_lname.getText().toString().trim().length()==0||edt_email.getText().toString().trim().length()==0||edt__uname.getText().toString().trim().length()==0||edt_password.getText().toString().trim().length()==0){
+					Toast.makeText(MainActivity.this, "Please enter value", Toast.LENGTH_SHORT).show();
+							return;
+					}
+//					 else if(edt_fname.getText().toString().trim().length()!=0&&edt_lname.getText().toString().trim().length()!=0&&edt_email.getText().toString().trim().length()!=0&&edt__uname.getText().toString().trim().length()!=0&&edt_password.getText().toString().trim().length()!=0){
+//						Toast.makeText(MainActivity.this, "save", Toast.LENGTH_SHORT).show();
+//							return;
+//												
+//					 }
+						else
+						{
+
+							
+								edt__uname=(EditText)findViewById(R.id.edt_user_name);
+								
+							 	Intent intent = new Intent(MainActivity.this,Login.class);
+					            intent.putExtra("location", edt__uname.getText().toString());
+					            
+					            edt_password=(EditText)findViewById(R.id.edt_user_password);
+					            intent.putExtra("location1",edt_password.getText().toString());
+					            startActivity(intent);
+						}
+			
+					//RegistrationPreferences.putPASSWORD1(pref, edt_password.getText().toString());
+						
+			
+							Toast.makeText(MainActivity.this, "Registeration successfully",Toast.LENGTH_LONG).show();
+			
+						}
+				});
+		
+		//New Start
+		
+		String str_fname = edt_fname.getText().toString();
+		String   str_lname = edt_lname.getText().toString();
+		String        str_email = edt_email.getText().toString();
+		String    srt_uname = edt__uname.getText().toString();
+		String        strpass = 	edt_password.getText().toString();
+		
+		if(str_fname==null||str_fname==""||str_fname.length()<3)
+		{
+			show("Please Enter Correct FName.");
+		}
+		
+		else if(str_lname==null||str_lname==""||str_lname.length()<10)
+		{
+			show("Please Enter Correct LName.");
+		}
+		
+		else if(str_email==null||str_email==""||str_email.length()<10)
+		{
+			show("Please Enter Correct Email id.");
+		}
+		else if(srt_uname==null||srt_uname==""||srt_uname.length()<6)
+		{
+			show("Please Enter Correct uname.");
+		}
+		else if(strpass==null||strpass==""||strpass.length()<6)
+		{
+			show("Please Enter Correct Password.");
+		}
+		
+		else
+		{
+			db.execSQL("insert into login values('"+str_fname+"','"+str_lname+"','"+ str_email+"','"+ srt_uname+"','"+ strpass+"','nothing')");
+		
+			i=new Intent(this,Welcome.class);
+			startActivityForResult(i, 500);
+		
+			db.close();
+			finish();
+		}
+		//New End
+
+	}
+
+
+
+public void onClickStore(View v){
+	
+
+	EditText edt_fname,edt_lname,edt_email,edt__uname,edt_password;
+		edt_fname=(EditText)findViewById(R.id.edt_first_name);
+		edt_lname=(EditText)findViewById(R.id.edt_last_name);
+		edt_email=(EditText)findViewById(R.id.edt_email);
+		edt__uname=(EditText)findViewById(R.id.edt_user_name);
+		edt_password=(EditText)findViewById(R.id.edt_user_password);
+	
+
+		//convert EditText to string
+		String str_fname = edt_fname.getText().toString();
+		String   str_lname = edt_lname.getText().toString();
+		String        str_email = edt_email.getText().toString();
+		String    srt_uname = edt__uname.getText().toString();
+		String        strpass = 	edt_password.getText().toString();
+
+
+		if(0!=str_fname.length())
+			SharedPrefManager1.SetFName(str_fname);
+		
+		if(0!=str_lname.length())
+			SharedPrefManager1.SetLName(str_lname);
+		
+		if(0!=str_email.length())
+			SharedPrefManager1.SetEmail(str_email);
+		
+		if(0!=srt_uname.length())
+			SharedPrefManager1.SetUName(srt_uname);
+
+		if(0!=strpass.length())
+			SharedPrefManager1.SetPassword(strpass);
+		
+		SharedPrefManager1.StoreToPref();
+		
+		
+		
+		EditText tv = null;
+		tv = (EditText)findViewById(R.id.edt_first_name);
+		tv.setText("");
+		tv = (EditText)findViewById(R.id.edt_last_name);
+		tv.setText("");
+		tv = (EditText)findViewById(R.id.edt_email);
+		tv.setText("");
+		tv = (EditText)findViewById(R.id.edt_user_name);
+		tv.setText("");
+		tv = (EditText)findViewById(R.id.edt_user_password);
+		tv.setText("");
+		Toast.makeText(this, "Data Successfully Stored to SharedPreference", Toast.LENGTH_LONG).show();
+		
+}
+
+public void  onClickLoad(View v)
+{
+	SharedPrefManager1.LoadFromPref();
+	
+	String str_fname,str_lname,str_email,srt_uname,strpass ;
+str_fname=SharedPrefManager1.GetFName();
+str_lname=SharedPrefManager1.GetLName();
+
+str_email=SharedPrefManager1.GetEmail();
+srt_uname=SharedPrefManager1.GetUName();
+strpass=SharedPrefManager1.GetPassword();
+
+EditText edt=null;
+edt=(EditText)findViewById(R.id.edt_first_name);
+edt.setText(str_fname);
+
+edt=(EditText)findViewById(R.id.edt_last_name);
+edt.setText(str_lname);
+
+edt=(EditText)findViewById(R.id.edt_user_name);
+edt.setText(srt_uname);
+
+edt=(EditText)findViewById(R.id.edt_email);
+edt.setText(str_email);
+
+edt=(EditText)findViewById(R.id.edt_user_password);
+edt.setText(strpass);
+
+Toast.makeText(MainActivity.this, "Data Successfully Loaded from SharedPreference", Toast.LENGTH_LONG).show();
+
+
+}
+
+
+//		protected void onDestroy() {
+//			//databaseadapter.close();
+//			super.onDestroy();
+//		}
+		
+		public void show(String str)
+		{
+		Toast.makeText(this, str, Toast.LENGTH_LONG).show();	
+		}
+}

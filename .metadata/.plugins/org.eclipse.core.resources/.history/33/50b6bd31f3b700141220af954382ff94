@@ -1,0 +1,53 @@
+package com.example.goodfeetapp.fragment;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import com.example.goodfeetapp.R;
+
+public class Feetfrag extends Fragment{
+	Button btn_a,btn_b,btn_c,btn_d,btn_e,btn_f,btn_g,btn_h,btn_i,btn_j,btn_k,btn_l,btn_m,btn_n,btn_o,btn_p,btn_q,btn_r,btn_s,btn_t,btn_u,btn_v;
+	 @Override
+	    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	      Bundle savedInstanceState) {
+	      
+	      View view = inflater.inflate(R.layout.feet, container, false);
+	      System.out.println("in fragment login");
+	      ImageView send = (ImageView) view.findViewById(R.id.next);
+	     
+	     
+	      send.setOnClickListener(new OnClickListener() {
+	    	  
+			@Override 
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+	      		Bodyfrag body = new Bodyfrag();
+	      		// Replace the container with the new fragment
+	      		ft.replace(R.id.your_placeholder, body, Bodyfrag.TAG);
+	      		ft.addToBackStack(null);
+	      		// or ft.add(R.id.your_placeholder, new FooFragment());
+	      		// Execute the changes specified
+	      		ft.commit();
+			}
+		});
+	     
+	      ImageView previous = (ImageView) view.findViewById(R.id.previous);
+	      previous.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					 getFragmentManager().popBackStackImmediate(); 
+					
+				}
+			});
+	      return view;
+	    }
+}

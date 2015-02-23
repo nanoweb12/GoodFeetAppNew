@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <RelativeLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="horizontal"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:background="#ffffff">
+   
+   <TextView
+       android:id="@+id/txt_pm"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:text="@string/portrait_message"
+   android:textColor="#000000"
+   android:layout_margin="5dp"
+   android:textSize="20px" />
+   
+    <ListView
+       android:id="@+id/lst_pm"
+       android:layout_below="@+id/txt_pm"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       />
+   
+  
+
+<!-- More GUI components go here  -->
+
+</RelativeLayout>

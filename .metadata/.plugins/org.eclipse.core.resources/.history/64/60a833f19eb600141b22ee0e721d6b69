@@ -1,0 +1,26 @@
+<!-- <resources>
+    the theme applied to the application or activity
+    <style name="CustomActionBarTheme"
+           parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        
+    </style>
+
+    ActionBar styles
+    <style name="MyActionBar"
+           parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+       <item name="android:actionBarSize">70dip</item> 
+         <item name="android:background">#D3D3D3</item> 
+
+    </style>
+</resources> -->
+
+<resources>
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+       
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <item name="android:actionBarSize">80dip</item> 
+         <item name="android:background">#D3D3D3</item> 
+    </style>
+</resources>

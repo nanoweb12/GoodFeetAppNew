@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nativeapp.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/lay_1"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#D3D3D3" >
+    </RelativeLayout>
+    
+    
+    <Button
+        android:id="@+id/btn_native"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/responsive_menu"
+        android:layout_margin="5dp"
+        />
+    <ImageView
+        android:id="@+id/im_view"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ll"
+        android:layout_toRightOf="@+id/btn_native"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        
+        />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/im_view"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="15dp"
+        android:background="#347391"
+        />
+    
+
+</RelativeLayout>

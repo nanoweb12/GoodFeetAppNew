@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/one"
+        android:title="HOME"/>
+	
+	<item
+        android:id="@+id/two"
+        android:title="New Customer"/>
+      
+    <item
+        android:id="@+id/three"
+        android:title="Existing Customer"/>
+        <item
+        android:id="@+id/three"
+        android:title="Lookup CRM"/>
+        
+        <item
+        android:id="@+id/three"
+        android:title="Setting"/>
+        
+</menu>

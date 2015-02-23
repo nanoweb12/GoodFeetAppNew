@@ -1,0 +1,296 @@
+package com.example.goodfeetapp.adapter;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.GridView;
+import android.widget.Toast;
+
+import com.example.goodfeetapp.R;
+
+public class ImageAdapter extends BaseAdapter {
+	private Context mContext;
+	Button imageView;
+	
+	
+	boolean isClicked=true;
+	boolean isClicked1=true;
+	boolean isClicked2=true;
+	boolean isClicked3=true;
+	boolean isClicked4=true;
+	boolean isClicked5=true;
+	boolean isClicked6=true;
+	boolean isClicked7=true;
+	
+	boolean isClicked8=true;
+	boolean isClicked9=true;
+	boolean isClicked10=true;
+	
+	public ImageAdapter(Context c) {
+		mContext = c;
+	}
+
+	public int getCount() {
+		return mThumbIds.length;
+	}
+
+	public Object getItem(int position) {
+		return null;
+	}
+
+	public long getItemId(int position) {
+		return 0;
+	}
+
+	// create a new ImageView for each item referenced by the Adapter
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		final Button imageView;
+		if (convertView == null) { // if it's not recycled, initialize some
+									// attributes
+			imageView = new Button(mContext);
+			// imageView.setBackgroundColor(Color.b);
+			imageView.setLayoutParams(new GridView.LayoutParams(143, 70));
+			imageView.setBackgroundResource(R.drawable.my_shape);
+			imageView.setTextSize(18);
+			imageView.setTextColor(Color.parseColor("#ffffff")); 
+			imageView.setPadding(3, 4, 3, 0);
+			
+
+		} else {
+			imageView = (Button) convertView;
+		}
+		System.out.println("click lisnere");
+		imageView.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				System.out.println("in listener====");
+				// TODO Auto-generated method stub
+				// Toast.makeText(mContext, " Hello This i position [0]" + position, Toast.LENGTH_SHORT).show();
+				 if(position==0&&isClicked==true)
+				 {
+					 
+					 Toast.makeText(mContext, " Hello This i position [postion]=" + position, Toast.LENGTH_SHORT).show();
+					
+				
+					// btn_shoe.setBackgroundResource(R.drawable.red);
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					 isClicked=false;
+					 
+					 System.out.println("a1 is true===========");
+					 
+				 }
+				 else
+				 {
+					 System.out.println("a1 is false===========");
+					 if(position==0)
+						 
+					 { 
+						 imageView.setBackgroundResource(R.drawable.my_shape);
+						
+						 isClicked=true;
+					 }
+				 }
+				 
+				 //1..
+				 
+				 
+				 if(position==1&&isClicked1==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked1=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==1)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape);  
+					 isClicked1=true;
+					 }
+				 }
+				 
+				 //2
+				 
+				 if(position==2&&isClicked2==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked2=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==2)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape); 
+					 isClicked2=true;
+					 }
+				 }
+				 
+				 //3
+				 
+				 if(position==3&&isClicked3==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked3=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==3)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape); 
+					isClicked3=true;
+					 }
+				 }
+				 
+				 //4
+				 if(position==4&&isClicked4==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+				isClicked4=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==4)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape);
+					 isClicked4=true;
+					 }
+				 }
+				 
+				 //5
+				 
+				 if(position==5&&isClicked5==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked5=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==5)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape);
+					 isClicked5=true;
+					 }
+				 }
+				 
+				 //6
+				 
+				 if(position==6&&isClicked6==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked6=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==6)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape);  
+					 isClicked6=true;
+					 }
+				 }
+				 
+ //7
+				 
+				 if(position==7&&isClicked7==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked7=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==7)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape); 
+					 isClicked7=true;
+					 }
+				 }
+				 
+ //8
+				 
+				 if(position==8&&isClicked8==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked8=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==8)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape);
+					 isClicked8=true;
+					 }
+				 }
+//9
+				 
+				 if(position==9&&isClicked9==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked9=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==9)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape);
+					 isClicked9=true;
+					 }
+				 }
+				 
+				 
+				 
+//10
+				 
+				 if(position==10&&isClicked10==true)
+				 {
+					 
+					 imageView.setBackgroundResource(R.drawable.clicked_red); 
+					isClicked10=false;
+					 
+				 }
+				 else
+				 {
+					 if(position==10)
+					 {
+						 imageView.setBackgroundResource(R.drawable.my_shape);
+					 isClicked10=true;
+					 }
+				 }
+				 
+				 
+				 
+			}
+		});
+		
+
+		imageView.setText(mThumbIds[position]);
+		return imageView;
+	}
+
+	// references to our images
+	private String[] mThumbIds = { "Arch Supports!", "New Shoes", "Feet Hurt!",
+			"Body Hurt!", "Doctor Referred You!", "Friend Sent You!",
+			"Performance Enhancement!", "Improving Quality of life!",
+			"Update from old supports!", "Get a misc item!",
+			"Heard me write awsome!", "Button" };
+}

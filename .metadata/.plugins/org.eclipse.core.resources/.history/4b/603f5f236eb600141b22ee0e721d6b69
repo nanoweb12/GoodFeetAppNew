@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:background="@drawable/color"
+    android:orientation="vertical" >
+    
+    
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#f3fafe"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="185dp"
+            android:background="@drawable/logo3" />
+    </LinearLayout>
+    
+       
+
+
+        <TextView
+            android:id="@+id/help_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="55dp"
+            android:textColor="#ffffff"
+             android:singleLine="true"
+            android:text="Help us find the right combination of supoort for you!"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Whatis_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         	android:textColor="#ffffff"
+     		android:layout_below="@+id/help_txt"
+     		android:layout_marginLeft="85dp"
+     		android:layout_centerHorizontal="true"
+     		 android:singleLine="true"
+            android:text="What is your daily work environment like?"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/lay_one"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+    		android:layout_below="@+id/Whatis_txt"
+            android:orientation="horizontal" >
+
+            <TextView
+              android:id="@+id/txt_primry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                 android:singleLine="true"
+                android:text="Primary Work" />
+
+            <EditText
+                android:id="@+id/edt_primary"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+               android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@+id/txt_primry"
+                android:background="#ffffff"
+                android:hint="Enter primary work" />
+            
+               <TextView
+                   android:id="@+id/txt_sec"
+                 android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+              android:layout_below="@+id/txt_primry"
+              android:layout_margin="10dp"
+               android:singleLine="true"
+                 android:text="Secondary Work" />
+               
+                <EditText 
+                android:layout_width="200dp" 
+                android:layout_height="20dp" 
+            android:layout_toRightOf="@+id/txt_sec"
+                 android:background="#ffffff"
+                 android:layout_margin="10dp"
+                    android:layout_marginLeft="100dp"
+            android:layout_below="@+id/edt_primary"
+                android:hint="Enter secondary work" /> 
+                
+                    <TextView 
+                        android:id="@+id/txt_shoes"
+                 android:layout_width="wrap_content" 
+                 android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/txt_sec"
+                 android:singleLine="true"
+                android:text="Shoes" /> 
+
+            <TextView
+                android:id="@+id/txt_activity"
+                 android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/txt_shoes"
+               android:layout_marginLeft="170dp"
+               android:layout_marginTop="50dp"
+                android:text="Activities" />
+               
+            
+        </RelativeLayout>
+
+
+          <RelativeLayout
+              
+            android:id="@+id/lay_two"
+          android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="130dp"
+            android:background="#ffffff"
+    		android:layout_below="@+id/lay_one"
+           >
+
+              
+
+            </RelativeLayout>
+              
+             
+<RelativeLayout
+              
+             android:id="@+id/lay_three"
+            android:layout_width="180dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="150dp"
+            android:background="#ffffff"
+           android:layout_marginTop="140dp"
+    	android:layout_toRightOf="@+id/lay_two"
+           >
+            </RelativeLayout>
+
+
+
+
+
+         
+         
+    
+        
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+     <resources>
+        
+ <gradient
+        android:startColor="#00BFFF"
+        android:centerColor="#00abe5"
+        android:endColor="#0098cc"
+         
+        />
+</resources> 

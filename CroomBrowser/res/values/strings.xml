@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CroomBrowser</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+     <string name="country_prompt">BROWSER STYLE</string>
+    
+<!--      <string-array name="BROWSER STYLE"> -->
+       
+<!--     </string-array> -->
+
+
+
+</resources>

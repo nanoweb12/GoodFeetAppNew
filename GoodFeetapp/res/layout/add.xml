@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  
+  android:layout_height="fill_parent">
+  
+       <LinearLayout
+        android:id="@+id/appicon"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#f3fafe"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+           android:src="@drawable/logo3"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+  
+    
+    
+    
+  <TextView 
+  android:id="@+id/tv_fname"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:text="FirstName: "
+  />
+  <EditText 
+  android:id="@+id/et_client"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+  <TextView 
+  android:id="@+id/tv_lastname"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:text="LastName："
+  />
+  <EditText 
+  android:id="@+id/et_lastname"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+  <TextView 
+  android:id="@+id/tv_tel"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:text="Phone:"
+  />
+  <EditText 
+  android:id="@+id/et_tel"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+  <TextView 
+  android:id="@+id/tv_email"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:text="E-mail:"
+  />
+  <EditText 
+  android:id="@+id/et_email"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+  <TextView 
+  android:id="@+id/tv_address"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:text="Address: "
+  />
+  <EditText 
+  android:id="@+id/et_address"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+  <LinearLayout 
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  >
+  <Button 
+  android:id="@+id/bt_ok"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="Submit"
+  />
+  <Button 
+  android:id="@+id/bt_cancel"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_marginLeft="30sp"
+  android:text="Reset"
+  />
+  </LinearLayout>
+</LinearLayout>

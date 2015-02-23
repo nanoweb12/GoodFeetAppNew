@@ -1,0 +1,202 @@
+package com.example.goodfeetapp.adapter;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.GridView;
+import android.widget.Toast;
+
+import com.example.goodfeetapp.R;
+
+public class Shoeadapter extends BaseAdapter {
+	private Context mContext;
+	
+	boolean a1=true;
+	boolean a2=true;
+	boolean a3=true;
+	boolean a4=true;
+	boolean a5=true;
+	boolean a6=true;
+	boolean a7=true;
+	
+	public Shoeadapter(Context c) {
+		mContext = c;
+	}
+
+	public int getCount() {
+		return mThumbIds.length;
+	}
+
+	public Object getItem(int position) {
+		return null;
+	}
+
+	public long getItemId(int position) {
+		return 0;
+	}
+
+	// create a new ImageView for each item referenced by the Adapter
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		final Button btn_shoe;
+		if (convertView == null) { // if it's not recycled, initialize some
+			// attributes
+			btn_shoe = new Button(mContext);
+			// imageView.setBackgroundColor(Color.b);
+			btn_shoe.setLayoutParams(new GridView.LayoutParams(125, 70));
+			btn_shoe.setBackgroundResource(R.drawable.my_shape);
+			btn_shoe.setTextColor(Color.parseColor("#ffffff")); 
+			btn_shoe.setTextSize(14);
+			btn_shoe.setPadding(2, 2, 2, 2);
+			
+			
+
+
+		} else {
+			btn_shoe = (Button) convertView;
+		}
+
+		btn_shoe.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				// Toast.makeText(mContext, " Hello This i position [0]" + position, Toast.LENGTH_SHORT).show();
+				if(position==0&&a1==true)
+				{
+
+					Toast.makeText(mContext, " Hello This i position [postion]=" + position, Toast.LENGTH_SHORT).show();
+
+
+					// btn_shoe.setBackgroundResource(R.drawable.red);
+					btn_shoe.setBackgroundResource(R.drawable.clicked_red); 
+					a1=false;
+
+					System.out.println("a1 is true===========");
+
+				}
+				else
+				{
+					System.out.println("a1 is false===========");
+					if(position==0)
+					{
+						btn_shoe.setBackgroundResource(R.drawable.my_shape);
+
+						a1=true;
+					}
+				}
+
+
+				if(position==1&&a2==true)
+				{
+
+					btn_shoe.setBackgroundResource(R.drawable.clicked_red);
+					a2=false;
+
+				}
+				else
+				{
+					if(position==1)
+					{
+						btn_shoe.setBackgroundResource(R.drawable.my_shape);
+						a2=true;
+					}
+				}
+
+				if(position==2&&a3==true)
+				{
+
+					btn_shoe.setBackgroundResource(R.drawable.clicked_red);
+					a3=false;
+
+				}
+				else
+				{
+					if(position==2)
+					{
+						btn_shoe.setBackgroundResource(R.drawable.my_shape);
+						a3=true;
+					}
+				}
+				if(position==3&&a4==true)
+				{
+
+					btn_shoe.setBackgroundResource(R.drawable.clicked_red);
+					a4=false;
+
+				}
+				else
+				{
+					if(position==3)
+					{
+						btn_shoe.setBackgroundResource(R.drawable.my_shape);
+						a4=true;
+					}
+				}
+				if(position==4&&a5==true)
+				{
+
+					btn_shoe.setBackgroundResource(R.drawable.clicked_red);
+					a5=false;
+
+				}
+				else
+				{
+					if(position==4)
+					{
+						btn_shoe.setBackgroundResource(R.drawable.my_shape);
+						a5=true;
+					}
+				}
+
+				if(position==5&&a6==true)
+				{
+
+					btn_shoe.setBackgroundResource(R.drawable.clicked_red);
+					a6=false;
+
+				}
+				else
+				{
+					if(position==5)
+					{
+						btn_shoe.setBackgroundResource(R.drawable.my_shape);
+						a6=true;
+					}
+				}
+
+				if(position==6&&a7==true)
+				{
+
+					btn_shoe.setBackgroundResource(R.drawable.clicked_red);
+					a7=false;
+
+				}
+				else
+				{
+					if(position==6)
+					{
+						btn_shoe.setBackgroundResource(R.drawable.my_shape);
+						a7=true;
+					}
+				}
+			}
+		});
+
+
+
+
+
+
+		btn_shoe.setText(mThumbIds[position]);
+		return btn_shoe;
+	}
+
+	// references to our images
+	private String[] mThumbIds = { "Athletic", "Oxforce walking", "Dress",
+			"Walk boots!", "Hiking boots!", "Safety!",
+	"Additional styles!"  };
+}

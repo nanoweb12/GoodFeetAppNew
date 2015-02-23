@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0098cc"
+     >
+
+  <!--   <LinearLayout
+        android:id="@+id/appicon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14"
+        android:background="#f3fafe"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo3" />
+    </LinearLayout> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       
+        android:background="#0098cc"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <ImageView
+            android:id="@+id/back_bring"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="18"
+            android:scaleType="centerInside"
+            android:src="@drawable/left_arrow" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="67"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="What brings you in today?"
+                 android:singleLine="true"
+                android:textColor="#0098cc"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Select which option to apply"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <GridView
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:columnWidth="110dp"
+                android:gravity="center"
+                android:numColumns="4"
+                android:verticalSpacing="10dp" >
+            </GridView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/forward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="18"
+            android:scaleType="centerInside"
+            android:src="@drawable/right_arrow" />
+    </LinearLayout>
+
+</LinearLayout>

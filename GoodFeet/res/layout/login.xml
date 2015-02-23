@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/color"
+    >
+   
+    
+      <RelativeLayout
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:orientation="horizontal"
+             android:background="#f3fafe">
+
+          <ImageView
+              android:id="@+id/imageView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/backbutton" />
+
+          <ImageView
+              android:id="@+id/img_logo2"
+              android:layout_width="80dp"
+              android:layout_height="30dp"
+              android:layout_marginLeft="190dp"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/logo3" />
+          
+         
+              </RelativeLayout>
+              
+      <TextView
+          android:id="@+id/txt_welcomel"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Welcome!"
+          android:textColor="#ffffff"
+          android:layout_marginTop="60dp"
+          android:layout_marginLeft="220dp"
+          android:textSize="20sp"
+          
+          
+          />
+      <EditText
+          android:id="@+id/edt_namel"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:hint="Name"
+          android:textStyle="normal|italic"
+          android:layout_centerInParent="true"
+          android:background="#f3fafe"
+          />
+      
+         <EditText
+          android:id="@+id/edt_emaill"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:hint="Email"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="150dp"
+          android:textStyle="normal|italic"
+          android:background="#f3fafe"
+          />
+         
+         <Button
+             android:id="@+id/btn_getstartl"
+             android:layout_width="200dp"
+             android:layout_height="30dp"
+             android:text="LETS GET STARTED!"
+            
+             android:layout_marginTop="200dp"
+             android:layout_marginLeft="170dp"
+             android:background="#565656"
+             />
+         
+         <TextView
+             android:id="@+id/txt_copyrightl"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:text="Copyright@2015 Good Feet"
+                android:textStyle="normal|italic"
+             android:textColor="#ffffff"
+             android:layout_marginTop="250dp"
+             android:layout_marginLeft="170dp"
+             />
+    
+</RelativeLayout>

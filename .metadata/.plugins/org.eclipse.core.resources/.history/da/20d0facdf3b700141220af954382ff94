@@ -1,0 +1,104 @@
+package com.example.goodfeetapp.fragment;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import com.example.goodfeetapp.R;
+
+public class Feetfrag extends Fragment{
+	Button btn_a,btn_b,btn_c,btn_d,btn_e,btn_f,btn_g,btn_h,btn_i,btn_j,btn_k,btn_l,btn_m,btn_n,btn_o,btn_p,btn_q,btn_r,btn_s,btn_t,btn_u,btn_v;
+	 @Override
+	    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	      Bundle savedInstanceState) {
+	      
+	      View view = inflater.inflate(R.layout.feet, container, false);
+	      
+			btn_a = (Button) view.findViewById(R.id.btn_A);
+			btn_b = (Button) view.findViewById(R.id.btn_B);
+			
+			btn_c = (Button) view.findViewById(R.id.btn_C);
+			btn_d = (Button) view.findViewById(R.id.btn_D);
+			btn_e = (Button) view.findViewById(R.id.btn_E);
+			btn_f = (Button) view.findViewById(R.id.btn_F);
+			btn_g = (Button) view.findViewById(R.id.btn_G);
+			btn_h = (Button) view.findViewById(R.id.btn_H);
+			
+			btn_i = (Button) view.findViewById(R.id.btn_I);
+			btn_j = (Button) view.findViewById(R.id.btn_j);
+			btn_k = (Button) view.findViewById(R.id.btn_k);
+			btn_l = (Button) view.findViewById(R.id.btn_l);
+			btn_m = (Button) view.findViewById(R.id.btn_M);
+			btn_n = (Button) view.findViewById(R.id.btn_N);
+			btn_o = (Button) view.findViewById(R.id.btn_o);
+			btn_p = (Button) view.findViewById(R.id.btn_p);
+			btn_q = (Button) view.findViewById(R.id.btn_q);
+			btn_r = (Button) view.findViewById(R.id.btn_r);
+			btn_s = (Button) view.findViewById(R.id.btn_S);
+			btn_t = (Button) view.findViewById(R.id.btn_T);
+			btn_u = (Button) view.findViewById(R.id.btn_U);
+			btn_v = (Button) view.findViewById(R.id.btn_V);
+			
+			btn_a.setOnClickListener((OnClickListener) this);
+			btn_b.setOnClickListener((OnClickListener) this);
+			btn_c.setOnClickListener((OnClickListener) this);
+			btn_d.setOnClickListener((OnClickListener) this);
+			btn_e.setOnClickListener((OnClickListener) this);
+			btn_f.setOnClickListener((OnClickListener) this);
+			btn_g.setOnClickListener((OnClickListener) this);
+			
+			btn_h.setOnClickListener((OnClickListener) this);
+			btn_i.setOnClickListener((OnClickListener) this);
+			btn_j.setOnClickListener((OnClickListener) this);
+			btn_k.setOnClickListener((OnClickListener) this);
+			btn_l.setOnClickListener((OnClickListener) this);
+			
+			btn_m.setOnClickListener((OnClickListener) this);
+			btn_n.setOnClickListener((OnClickListener) this);
+			btn_o.setOnClickListener((OnClickListener) this);
+			btn_p.setOnClickListener((OnClickListener) this);
+			btn_q.setOnClickListener((OnClickListener) this);
+			
+			btn_r.setOnClickListener((OnClickListener) this);
+			btn_s.setOnClickListener((OnClickListener) this);
+			btn_t.setOnClickListener((OnClickListener) this);
+			btn_u.setOnClickListener((OnClickListener) this);
+			btn_v.setOnClickListener((OnClickListener) this);
+	      System.out.println("in fragment login");
+	      ImageView send = (ImageView) view.findViewById(R.id.next);
+	     
+	     
+	      send.setOnClickListener(new OnClickListener() {
+	    	  
+			@Override 
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+	      		Bodyfrag body = new Bodyfrag();
+	      		// Replace the container with the new fragment
+	      		ft.replace(R.id.your_placeholder, body, Bodyfrag.TAG);
+	      		ft.addToBackStack(null);
+	      		// or ft.add(R.id.your_placeholder, new FooFragment());
+	      		// Execute the changes specified
+	      		ft.commit();
+			}
+		});
+	     
+	      ImageView previous = (ImageView) view.findViewById(R.id.previous);
+	      previous.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					 getFragmentManager().popBackStackImmediate(); 
+					
+				}
+			});
+	      return view;
+	    }
+}

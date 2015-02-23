@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0098cc" >
+
+    <LinearLayout
+        android:id="@+id/mainlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+   <!--  <LinearLayout
+            android:id="@+id/appicon"
+            android:layout_width="match_parent"
+           android:layout_height="67dp"
+            android:background="#f3fafe"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+               android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo3" />
+        </LinearLayout> -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Help us find the right combination of support for you!"
+             android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="What do you do to play?"
+             android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:scaleType="fitCenter"
+                android:src="@drawable/left_arrow" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                 android:layout_marginBottom="7dp"
+                android:background="#0098cc"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/left_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/shoes"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="50"
+                        android:gravity="center"
+                        android:text="Shoes"
+                        android:textColor="#347391"
+                        android:textSize="20sp" />
+
+                    <GridView
+                        android:id="@+id/grid_shoes"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:gravity="center"
+                        android:numColumns="3"
+                        android:verticalSpacing="15dp" >
+                    </GridView>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_margin="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#696969"
+                    android:text="Are there any style of shoes you would like to use?"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="40"
+                android:background="#0098cc"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/right_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/activities"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="50"
+                        android:gravity="center"
+                        android:text="Activities"
+                        android:textColor="#347391"
+                        android:textSize="20sp" />
+
+                    <GridView
+                        android:id="@+id/grid_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="390dp"
+                        android:gravity="center"
+                        android:numColumns="2"
+                        android:verticalSpacing="15dp" >
+                    </GridView>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#696969"
+                    android:layout_marginTop="15dp"
+                      android:layout_marginLeft="25dp"
+                       android:layout_marginRight="5dp"
+                       
+                    android:text="Are there any activity you would like to do if you could?"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:src="@drawable/right_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
